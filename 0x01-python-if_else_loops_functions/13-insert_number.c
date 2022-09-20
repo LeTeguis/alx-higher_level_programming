@@ -33,21 +33,19 @@ listint_t *insert_node(listint_t **head, int number)
 	{
 		new_element->next = tmp;
 		*head = new_element;
+		return (new_element);
 	}
-	else
+	while (tmp->next != 0)
 	{
-		while (tmp->next != 0)
+		if (tmp->next->n > number)
 		{
-			if (tmp->next->n > number)
-			{
-				new_element->next = tmp->next;
-				tmp->next = new_element;
-				break;
-			}
-			tmp = tmp->next;
-			if (tmp->next == 0)
-				tmp->next = new_element;
+			new_element->next = tmp->next;
+			tmp->next = new_element;
+			return (new_element);
 		}
+		tmp = tmp->next;
 	}
+	if (tmp->next == 0)
+		tmp->next = new_element;
 	return (new_element);
 }
