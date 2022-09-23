@@ -12,6 +12,6 @@ if __name__ == "__main__":
         b = int(argv[3])
         o = argv[2]
         if o in operator:
-            print("{:d} {:d} {:d} = {:d}".format(a, o, b, operator[o](a, b)))
+            print("{:d} {} {:d} = {:d}".format(a, o, b, operator[o](a, b)))
         else:
             print("Unknown operator. Available operators: +, -, * and /")
