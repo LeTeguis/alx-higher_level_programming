@@ -1,8 +1,15 @@
 #!/usr/bin/env python3
 
 def no_c(my_string):
-    new_str = ""
-    for e in my_string:
-        if e != 'c' and e != 'C':
-            new_str += e
-    return (new_str)
+    i = 0
+    while i < len(my_string):
+        if my_string[i] == 'c' or my_string[i] == 'C':
+            if i == 0:
+                my_string = my_string[1:]
+            elif i == len(my_string) - 1:
+                my_string = my_string[:-1]
+            else:
+                my_string = my_string[:i] + my_string[i+1:]
+        else:
+            i += 1
+    return (my_string)
