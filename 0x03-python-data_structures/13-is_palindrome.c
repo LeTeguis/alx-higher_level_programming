@@ -50,14 +50,14 @@ int is_palindrome(listint_t **head)
 	size_t len = size_list(*head);
 	size_t i = 0;
 
-	if (head == 0 || *head == 0)
+	if (head == 0 || *head == 0 || len == 1)
 		return (1);
-	if (len == 1)
-		return (1);
-	if (len == 2)
-		return ((gauche->n == gauche->next->n) ? 1 : 0);
-	if (len == 3)
-		return ((gauche->n == gauche->next->next->n) ? 1 : 0);
+	/*
+	 * if (len == 2)
+	 * return ((gauche->n == gauche->next->n) ? 1 : 0);
+	 * if (len == 3)
+	 * return ((gauche->n == gauche->next->next->n) ? 1 : 0);
+	 */
 	middle = getNode(*head, (len / 2) + ((len % 2 == 1) ? 1 : 0));
 	i = len / 2;
 	while (i > 0)
