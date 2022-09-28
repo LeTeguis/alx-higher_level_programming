@@ -22,6 +22,4 @@ def roman_to_int(roman_string):
                 valeur = valeur + v
                 rs = rs.replace(k, "")
                 break
-    if len(rs) > 0:
-        return 0
     return valeur
