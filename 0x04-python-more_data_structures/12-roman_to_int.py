@@ -40,7 +40,7 @@ def roman_to_int(roman_string):
     Units = {U[i]: V[i] for i in range(9)}
     Tens = {T[i]: V[i] * 10 for i in range(9)}
     Hundreds = {H[i]: V[i] * 100 for i in range(9)}
-    Thousands = {TH[i]: V[6 - i] * 1000 for i in range(3)}
+    Thousands = {TH[i]: V[6 + i] * 1000 for i in range(3)}
     resume = [Units, Tens, Hundreds, Thousands]
     rs = ""
     for e in roman_string:
@@ -49,7 +49,17 @@ def roman_to_int(roman_string):
     for dom in resume:
         for k, v in dom.items():
             if k in rs:
-                valeur = valeur + v
+                if k == "V" and "IV" in rs:
+                    valeur = valeur + 4
+                    k = "IV"
+                elif k == "L" and "XL" in rs:
+                    valeur = valeur + 40
+                    k = "XL"
+                elif k == "D" and "CD" in rs:
+                    valeur = valeur + 400
+                    k = "CD"
+                else:
+                    valeur = valeur + v
                 rs = rs.replace(k, "", 1)
                 break
     return valeur

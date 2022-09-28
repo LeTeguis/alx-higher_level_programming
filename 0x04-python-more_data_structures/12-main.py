@@ -21,3 +21,8 @@ print("{} = {}".format(roman_number, roman_to_int(roman_number)))
 
 roman_number = int_to_roman(3999)
 print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+for i in range(4000):
+    r = int_to_roman(i)
+    if i != roman_to_int(r):
+        print(f"erreur_{i}: {r} : {roman_to_int(r)}")
