@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include <python3.8/Python.h>
-#include <python3.8/bytesobject.h>
+#include <Python.h>
+#include <bytesobject.h>
 
 /**
  * print_python_bytes - print
