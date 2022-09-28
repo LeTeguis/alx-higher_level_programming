@@ -16,6 +16,8 @@ def roman_to_int(roman_string):
         for k, v in v1.items():
             if k in rs:
                 valeur = valeur + v
-                rs = rs.replace(k, '*')
+                rs = rs.replace(k, "")
                 break
+    if len(rs) > 0:
+        return 0
     return valeur
