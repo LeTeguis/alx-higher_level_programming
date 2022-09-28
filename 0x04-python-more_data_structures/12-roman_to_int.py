@@ -11,6 +11,7 @@ Thousands = {TH[i]: (3 - i) * 1000 for i in range(3)}
 GIR = [U, T, H, TH]
 GRI = [Units, Tens, Hundreds, Thousands]
 
+
 def int_to_roman(valeur):
     if valeur is None or type(valeur) is not int:
         return '0'
@@ -27,9 +28,6 @@ def int_to_roman(valeur):
             valeur = int(valeur / 10)
             i += 1
     return result
-
-
-ROMAN_INT = {int_to_roman(i): i for i in range(3999)}
 
 
 def roman_to_int(roman_string):
