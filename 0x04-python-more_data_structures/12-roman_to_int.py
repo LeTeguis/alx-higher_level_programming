@@ -3,11 +3,15 @@
 def roman_to_int(roman_string):
     if roman_string is None or type(roman_string) is not str:
         return 0
-    Units = {"IX": 9, "VIII": 8, "VII": 7, "VI": 6, "V": 5, "IV": 4, "III": 3, "II": 2, "I": 1}
-    Tens = {"XC": 90, "LXXX": 80, "LXX": 70, "LX": 60, "L": 50, "XL": 40, "XXX": 30, "XX": 20, "X": 10}
-    Hundreds = {"CM": 900, "DCCC": 800, "DCC": 700, "DC": 600, "D": 500, "CD": 400, "CCC": 300, "CC": 200, "C": 100}
+    V = [9, 8, 7, 6, 5, 4, 3, 2, 1]
+    U = ["IX", "VIII", "VII", "VI", "V", "IV", "III", "II", "I"]
+    T = ["XC", "LXXX", "LXX", "LX", "L", "XL", "XXX", "XX", "X"]
+    H = ["CM", "DCCC", "DCC", "DC", "D", "CD", "CCC", "CC", "C"]
+    Units = {U[i]: V[i] for i in range(9)}
+    Tens = {T[i]: V[i] * 10 for i in range(9)}
+    Hundreds = {H[i]: V[i] * 100 for i in range(9)}
     Thousands = {"MMM": 3000, "MM": 2000, "M": 1000}
-    resume = {"Units": Units, "Tens": Tens, "Hundreds": Hundreds, "Thousands": Thousands}
+    resume = {"Un": Units, "Te": Tens, "Hu": Hundreds, "Th": Thousands}
     rs = ""
     for e in roman_string:
         rs = f"{rs}{e}"
