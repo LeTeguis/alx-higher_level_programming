@@ -23,7 +23,9 @@ def int_to_roman(valeur):
             i += 1
     return result
 
+
 ROMAN_INT = {int_to_roman(i): i for i in range(3999)}
+
 
 def roman_to_int(roman_string):
     if roman_string is None or type(roman_string) is not str:
