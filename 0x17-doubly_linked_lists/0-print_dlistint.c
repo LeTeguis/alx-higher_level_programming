@@ -1,6 +1,15 @@
 #include "lists.h"
 #include <stdio.h>
 
+/**
+ * print_prev - print
+ *
+ * @h: dlistint_t potential head
+ *
+ * Description: print all prev liste
+ *
+ * Return: size of list
+ */
 size_t print_prev(const dlistint_t *h)
 {
 	size_t t = 0;
@@ -15,9 +24,19 @@ size_t print_prev(const dlistint_t *h)
 	return (t);
 }
 
+/**
+ * print_next - print
+ *
+ * @h: dlistint_t potential head
+ *
+ * Description: print all next liste
+ *
+ * Return: size of list
+ */
 size_t print_next(const dlistint_t *h)
 {
 	size_t t = 0;
+
 	if (h == 0)
 		return (0);
 	if (h->next != 0)
@@ -28,6 +47,15 @@ size_t print_next(const dlistint_t *h)
 	return (t);
 }
 
+/**
+ * print_dlistint - print
+ *
+ * @h: dlistint_t potential head
+ *
+ * Description: print all liste
+ *
+ * Return: size of list
+ */
 size_t print_dlistint(const dlistint_t *h)
 {
 	size_t taille = 1;
