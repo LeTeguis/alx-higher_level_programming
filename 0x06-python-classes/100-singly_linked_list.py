@@ -6,7 +6,7 @@
 
 
 class Node:
-    """
+    """Node
     """
     __data = 0
     __next_node = None
@@ -22,13 +22,13 @@ class Node:
 
     @property
     def data(self):
-        """
+        """int: getter
         """
         return self.__data
 
     @data.setter
     def data(self, value):
-        """
+        """int: setter
         """
         if type(value) != int:
             raise TypeError("data must be an integer")
@@ -36,20 +36,21 @@ class Node:
 
     @property
     def next_node(self):
-        """
+        """Node: getter
         """
         return self.__next_node
 
     @next_node.setter
     def next_node(self, value):
-        """
+        """Node: setter
         """
         if value != None and type(value) != Node:
             raise TypeError("next_node must be a Node object")
         self.__next_node = value
 
+
 class SinglyLinkedList:
-    """
+    """SinglyLinkedList
     """
     __head = None
 
