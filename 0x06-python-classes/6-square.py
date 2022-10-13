@@ -55,7 +55,7 @@ class Square:
         """
         if self.__size > 0:
             for i in range(self.__size):
-                if self.__position[1] <= self.__position[0]:
+                if self.__position[1] >= 0:
                     p = " " * self.__position[0]
                     s = "#" * self.__size
                     print("{}{}".format(p, s))
