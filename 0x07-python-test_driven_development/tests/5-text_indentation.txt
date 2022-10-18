@@ -1,0 +1,16 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("Bonjour. Je suis sideris et toi? Comment tu te nomme ?    bye      ")
+Bonjour
+<BLANKLINE>
+Je suis sideris et toi
+<BLANKLINE>
+Comment tu te nomme
+<BLANKLINE>
+bye
+>>> text_indentation(0.5)
+Traceback (most recent call last):
+TypeError: text must be a string
+>>> text_indentation(-5)
+Traceback (most recent call last):
+TypeError: text must be a string
