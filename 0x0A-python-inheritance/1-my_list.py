@@ -7,10 +7,12 @@
 
 class MyList(list):
     """
+    MyList: the chield of list class
     """
 
     def print_sorted(self):
         """
+        print list in sorted
         """
         liste = self.copy()
         i = 0
