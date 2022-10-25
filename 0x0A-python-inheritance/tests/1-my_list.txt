@@ -1,0 +1,4 @@
+>>> MyList = __import__('1-my_list').MyList
+
+>>> print(Mylist([1, 5, 2, 8, 3, 6]))
+[1, 2, 3, 5, 6, 8]
