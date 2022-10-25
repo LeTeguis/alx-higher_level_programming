@@ -5,6 +5,7 @@
     modulue to print objet information
 """
 
+
 def lookup(obj):
     """
     lookup: print variable and method
